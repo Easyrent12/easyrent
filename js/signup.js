@@ -265,8 +265,8 @@ async function handleStudentSubmit(e) {
   try {
     showLoading(true, "studentForm");
     const result = await registerStudent(studentData);
-    showSuccess(result.message || "Registration successful!");
-    setTimeout(() => (window.location.href = "/login"), 1500);
+    showSuccess("Account created successfully!");
+    setTimeout(() => (window.location.href = "./login.html"), 2000);
   } catch (error) {
     let errorMessage = error.message;
     if (errorMessage.includes("Email") || errorMessage.includes("Password")) {
@@ -400,7 +400,16 @@ function showSuccess(message) {
   notification.className = "notification success";
   notification.textContent = message;
   document.body.appendChild(notification);
-  setTimeout(() => notification.remove(), 3000);
+  
+  // Trigger animation
+  setTimeout(() => {
+    notification.classList.add("show");
+  }, 100);
+  
+  setTimeout(() => {
+    notification.classList.remove("show");
+    setTimeout(() => notification.remove(), 300);
+  }, 3000);
 }
 
 function showError(message) {

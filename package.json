@@ -6,7 +6,11 @@
     "generate-favicons": "node generate-favicons.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
     "sharp": "^0.32.6",
-    "sharp-ico": "^0.1.5"
+    "sharp-ico": "^0.1.5",
+    "twilio": "^5.7.1"
   }
 }

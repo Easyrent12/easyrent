@@ -111,6 +111,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Show success and redirect
       successMessage.style.display = "flex";
+      
+      // Custom success message based on user type
+      let successText = "";
+      switch (userType) {
+        case "student":
+          successText = "Student login successful!";
+          break;
+        case "owner":
+          successText = "Owner login successful!";
+          break;
+        case "admin":
+          successText = "Admin login successful!";
+          break;
+        default:
+          successText = "Login successful!";
+      }
+      
+      successMessage.innerHTML = `
+        <i class="fas fa-check-circle"></i>
+        ${successText}
+      `;
       setTimeout(() => {
         window.location.href = redirectUrl;
       }, 1500);

@@ -235,6 +235,34 @@ body.dark {
 }
 
 .forgot-password a:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+/* Sign Up Link */
+.signup-link {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.signup-link p {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.dark .signup-link p {
+  color: #9ca3af;
+}
+
+.signup-link a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.signup-link a:hover {
+  color: #4f46e5;
   text-decoration: underline;
 }
 
